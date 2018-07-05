@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="E-CHECK IN - Check in made easy through web">
+    <meta name="keyword" content="Check in, event organizing, event planning">
+    <title>{{ title }}</title>
+    <script src="js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- build:css css/main.min.css -->
+    <link href="css/vendors/pace-progress/pace.css" rel="stylesheet"> 
+    <link href="css/vendors/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="css/vendors/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
+    <!-- endbuild -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+
+    <!-- Header Include -->
+    {% include "partials/header.html" %}
+    <div class="app-body">
+        <!-- SIdebar Include -->
+        {% include "partials/left-sidebar.html" %}
+        <main class="main">
+            
+            <!-- Breadcrumbs Include -->
+            {% include "partials/breadcrumbs.html" %}
+
+            <!-- Body Content -->
+            {% block content %} {% endblock %}
+
+
+        </main>
+    </div>
+
+    <!-- footer Include -->
+    {% include "partials/footer.html" %}
+
+
+    <!-- build:js js/scripts.min.js -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="js/coreui.min.js"></script>
+    <script src="js/jquery.easypiechart.js"></script>
+    <script src="js/charts.js"></script>
+    <!-- endbuild -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

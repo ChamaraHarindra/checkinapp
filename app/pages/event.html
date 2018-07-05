@@ -1,0 +1,27 @@
+{% set title = 'Event Page' %} {% set Event = true %}
+<!-- base layout file inheritance -->
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="card">
+            <div class="card-body py-2">
+                <div class="row">
+                    <div class="col">
+                            <select name="" id="" class="selectpicker">
+                                    <option value="Company 01">Company 01</option>
+                                    <option value="Company 01">Company 02</option>
+                                    <option value="Company 03">Company 03</option>
+                                    <option value="Company 04">Company 04</option>
+                                </select>  
+                    </div>
+                    <!--/.col-->
+                </div>
+                <!--/.row-->
+            </div>
+        </div>
+        <!--/.card-->
+    </div>
+</div>
+
+{% endblock %}
