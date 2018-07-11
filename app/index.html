@@ -11,10 +11,12 @@
     <script src="js/pace.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <!-- build:css css/main.min.css -->
     <link href="css/vendors/pace-progress/pace.css" rel="stylesheet"> 
     <link href="css/vendors/bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="css/vendors/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="css/vendors/awesome-select/awselect.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet"> 
     <!-- endbuild -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -27,7 +29,7 @@
     <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="./">
         <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="CoreUI Logo">
         <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">
     </a>
@@ -45,11 +47,6 @@
                 <input type="text" class="form-control searchbox" placeholder="Search your events" aria-label="" aria-describedby="basic-addon1">
             </div>
         </li>
-        <li class="nav-item px-3">
-                <div class="input-group">
-                    
-                </div>
-            </li>
     </ul>
     <ul class="nav navbar-nav ml-auto pr-2">
         <li class="nav-item dropdown d-md-down-none">
@@ -104,37 +101,48 @@
     <div class="app-body">
         <!-- SIdebar Include -->
         <div class="sidebar">
-    <nav class="sidebar-nav">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">
-            <i class="nav-icon icon-home"></i> Event List
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="nav-icon icon-plus"></i> Add New Event</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="nav-icon icon-calculator"></i> Billing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="nav-icon icon-calendar"></i> Calendar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="nav-icon icon-support"></i> Help Center</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="nav-icon icon-settings"></i> Settings</a>
-        </li>
-      </ul>
-    </nav>
-    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
-  </div>
+  <nav class="sidebar-nav">
+    <ul class="nav">
+      <li class="nav-title">Your Company</li>
+      <li class="nav-title pt-0">
+        <select class="form-control">
+          <option value="Company 01" selected>Company 01</option>
+          <option value="Company 01">Company 02</option>
+          <option value="Company 03">Company 03</option>
+          <option value="Company 04">Company 04</option>
+        </select>
+      </li>
+      <li class="nav-title pt-0"></li>
+      <li class="nav-title">Menu</li>
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">
+          <i class="nav-icon icon-home"></i> Event List
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-plus"></i> Add New Event</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-calculator"></i> Billing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-calendar"></i> Calendar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-support"></i> Help Center</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-settings"></i> Settings</a>
+      </li>
+    </ul>
+  </nav>
+  <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+</div>
         <main class="main">
             
             <!-- Breadcrumbs Include -->
@@ -223,7 +231,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="event-name" href="#">Rochelle's Wedding</a>
+                            <a class="event-name" href="event.html">Rochelle's Wedding</a>
                             <div class="event-info">
                                 <div class="event-info__item">
                                     <i class="icon-clock pr-1"></i>
@@ -300,7 +308,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="event-name" href="#">Harry's Engagement</a>
+                            <a class="event-name" href="event.html">Harry's Engagement</a>
                             <div class="event-info">
                                 <div class="event-info__item">
                                     <i class="icon-clock pr-1"></i>
@@ -793,14 +801,17 @@
 
 
     <!-- build:js js/scripts.min.js -->
+    <script src="js/awselect.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>
     <script src="js/perfect-scrollbar.min.js"></script>
     <script src="js/coreui.min.js"></script>
     <script src="js/jquery.easypiechart.js"></script>
     <script src="js/charts.js"></script>
     <!-- endbuild -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    
     <script src="js/main.js"></script>
 
 </body>

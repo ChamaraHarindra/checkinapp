@@ -1,26 +1,61 @@
-{% set title = 'Event Page' %} {% set Event = true %}
+{% set title = 'Event Home Page' %} {% set Event = true %}
 <!-- base layout file inheritance -->
 {% extends "layout.html" %} {% block content %}
 
 <div class="container-fluid">
     <div class="animated fadeIn">
-        <div class="card">
-            <div class="card-body py-2">
-                <div class="row">
-                    <div class="col">
-                            <select name="" id="" class="selectpicker">
-                                    <option value="Company 01">Company 01</option>
-                                    <option value="Company 01">Company 02</option>
-                                    <option value="Company 03">Company 03</option>
-                                    <option value="Company 04">Company 04</option>
-                                </select>  
+        <div class="card event-grid__card">
+            <div class="event-background" id="event-background" style="background-image: url(img/events/engagement.jpg)">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/event-page-top-info.html" %} 
+            </div>
+            <nav class="sub-nav">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/sub-nav.html" %}     
+            </nav>
+            <div class="card-body">
+                <div class="row ">
+                    <div class="col-lg-3 col mb-3">
+                        <div class="event-desc-box">
+                            <div class="header">Description</div>
+                            <div class="content">Last Day Of Your Life.</div>
+                        </div>
                     </div>
-                    <!--/.col-->
+                    <div class="col-lg-3 col mb-3">
+                        <div class="event-desc-box">
+                            <div class="header">Date</div>
+                            <div class="content">From 2018-07-27 08:00 to
+                                <br/>2018-07-27 12:00</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col mb-3">
+                        <div class="event-desc-box">
+                            <div class="header">Contact Details</div>
+                            <div class="content">
+                                <div class="mb-2">
+                                    <a href="mailto:jashashika@gmail.com">
+                                        <i class="icon icon-envelope pr-2"></i>jashashika@gmail.com</a>
+                                </div>
+                                <div>
+                                    <a href="tel:718043596">
+                                        <i class="icon icon-phone pr-2"></i>718043596</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col mb-3">
+                        <div class="event-desc-box">
+                            <div class="header">Venue</div>
+                            <div class="content">
+                                Bandaranaike Memorial International Conference Hall,
+                                <br/>Colombo,
+                                <br/>Sri Lanka
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!--/.row-->
             </div>
         </div>
-        <!--/.card-->
     </div>
 </div>
 
