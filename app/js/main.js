@@ -35,4 +35,13 @@ $(document).ready( function () {
 } );
 
 
+// input masking
+$(document).ready(function(){
+  $('.date').mask("00/00/0000", {placeholder: "__/__/____"});
+  $('.time').mask('00:00:00', {placeholder: "__:__:__"});
+  $('.date_time').mask('00/00/0000 00:00:00', {placeholder: "__/__/____ __:__:__"});
+  $('.phone').mask('000-000-0000', {placeholder: "(___) ___ ____"});
+});
+
+
 //# sourceMappingURL=main.js.map

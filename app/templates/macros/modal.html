@@ -1,0 +1,148 @@
+{% macro modalPop(id, ariaLabel, modalTitle, modalSize, modal=1, btnText ) %}
+<div class="modal fade" id="{{ id }}" tabindex="-1" role="dialog" aria-labelledby="{{ ariaLabel }}" aria-hidden="true">
+    <div class="modal-dialog {{ modalSize }} modal-default" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="{{ ariaLabel }}">{{ modalTitle }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add invitee modal -->
+                {% if modal==1 %}
+                <div class="row mb-2">
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" aria-describedby="firstNameHelp" placeholder="Please enter your first name">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label for="middleName">Middle Name</label>
+                            <input type="text" class="form-control" id="middleName" aria-describedby="middleNameHelp" placeholder="Please enter your middle name">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp" placeholder="Please enter your last name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="firstName">Email</label>
+                            <input type="email" class="form-control" id="firstName" aria-describedby="firstNameHelp" placeholder="Please enter your email">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" class="form-control phone" id="phoneNumber" aria-describedby="phoneNumberHelp">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea name="" id="address" rows="5" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select name="" id="country" class="form-control">
+                                <option value="Sri Lanka">Sri Lanka</option>
+                                <option value="United States of America">United States of America</option>
+                                <option value="Belgium">Belgium</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <h6>Meal Plan</h6>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="chicken" class="custom-control-input">
+                                <label class="custom-control-label" for="chicken">Chicken</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="beef" class="custom-control-input">
+                                <label class="custom-control-label" for="beef">Beef</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="pork" class="custom-control-input">
+                                <label class="custom-control-label" for="pork">Pork</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="vegi" class="custom-control-input">
+                                <label class="custom-control-label" for="vegi">Vegetarian</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4"> 
+                        <div class="form-group">
+                            <h6>Drink Preference</h6>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="beer" class="custom-control-input">
+                                <label class="custom-control-label" for="beer">Beer</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="wine" class="custom-control-input">
+                                <label class="custom-control-label" for="wine">Wine</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="coffee" class="custom-control-input">
+                                <label class="custom-control-label" for="coffee">Coffee</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <h6>Music Preference</h6>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="classic" class="custom-control-input">
+                                <label class="custom-control-label" for="classic">Classic</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="jazz" class="custom-control-input">
+                                <label class="custom-control-label" for="jazz">Jazz</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                {% elif modal==2 %}
+                Add Walk-in Invitee form
+
+                {% elif modal==3 %}
+                Add invitee from event
+
+                {% elif modal==4 %}
+                Add invitee from CSV
+
+                {% elif modal==5 %}
+                Send Invitation
+  
+                {% elif modal==6 %}
+                Event Reminders
+
+                {% elif modal==7 %}
+                Event Cancellation Email
+
+                {% endif %}
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">{{ btnText }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}

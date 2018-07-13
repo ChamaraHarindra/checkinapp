@@ -23,10 +23,10 @@
                                     id="addDropdown">
                                     <i class="icon-plus pr-2"></i>Add</button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModal">Invitee</a>
-                                    <a class="dropdown-item" href="#">Walk-in Invitee</a>
-                                    <a class="dropdown-item" href="#">Invitee from Event</a>
-                                    <a class="dropdown-item" href="#">Invitee from CSV</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#addInvitee">Invitee</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#addWalkInInvitee">Walk-in Invitee</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#addEventInvitee">Invitee from Event</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#addCsvInvitee">Invitee from CSV</a>
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary">
@@ -36,9 +36,9 @@
                                     id="sendDropdown">
                                     <i class="icon-envelope pr-2"></i>Send</button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Invitations</a>
-                                    <a class="dropdown-item" href="#">Event Reminders</a>
-                                    <a class="dropdown-item" href="#">Event Cancellation Email</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendInvites">Invitations</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendEventReminders">Event Reminders</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendEventCancellationEmail">Event Cancellation Email</a>
                                 </div>
                             </div>
                         </div>
@@ -106,24 +106,23 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
+
+<!-- import Modal macro file -->
+{% import "macros/modal.html" as macroModals %}
+
+<!-- Add Invitee modal -->
+{{ macroModals.modalPop( 'addInvitee', '#addInviteeLabel', 'Add Invitee', 'modal-lg', modal=1, 'Add Invitee' ) }}
+<!-- Add walk-in invitee modal -->
+{{ macroModals.modalPop( 'addWalkInInvitee', '#addWalkInInviteeLabel', 'Add Walik-In Invitee', 'modal-lg', modal=2, 'Add Walk-in Invitee' ) }}
+<!-- Add invitee from event modal -->
+{{ macroModals.modalPop( 'addEventInvitee', '#addEventInviteeLabel', 'Add Invitee from Event', 'modal-lg', modal=3, 'Add Invitee from Event' ) }}
+<!-- Add invitee from CSV modal -->
+{{ macroModals.modalPop( 'addCsvInvitee', '#addCsvInviteeLabel', 'Add Invitee from CSV', 'modal-lg', modal=4, 'Add Invitee from CSV' ) }}
+<!-- Send invites modal -->
+{{ macroModals.modalPop( 'sendInvites', '#sendInvitesLabel', 'Send Invites', 'modal-lg', modal=5, 'Send Invites' ) }}
+<!-- Send event reminders -->
+{{ macroModals.modalPop( 'sendEventReminders', '#sendEventRemindersLabel', 'Send Event Reminders', 'modal-lg', modal=6, 'Send Event Reminders' ) }}
+<!-- Send event cancellation email -->
+{{ macroModals.modalPop( 'sendEventCancellationEmail', '#sendEventCancellationEmailLabel', 'Send Event Cancellation Email', 'modal-lg', modal=7, 'Send Event Cancellation Email' ) }}
 
 {% endblock %}

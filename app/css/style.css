@@ -11645,4 +11645,13 @@ h2 {
   .action-btn .icon-trash {
     color: #E74C3C; }
 
+.modal-default .modal-header {
+  background: #2b71ef;
+  color: white;
+  padding: 15px 15px;
+  text-transform: uppercase; }
+
+.modal-default button.close {
+  color: white; }
+
 /*# sourceMappingURL=style.css.map */

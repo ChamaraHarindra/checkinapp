@@ -223,10 +223,10 @@
                                     id="addDropdown">
                                     <i class="icon-plus pr-2"></i>Add</button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#exampleModal">Invitee</a>
-                                    <a class="dropdown-item" href="#">Walk-in Invitee</a>
-                                    <a class="dropdown-item" href="#">Invitee from Event</a>
-                                    <a class="dropdown-item" href="#">Invitee from CSV</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#addInvitee">Invitee</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#addWalkInInvitee">Walk-in Invitee</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#addEventInvitee">Invitee from Event</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#addCsvInvitee">Invitee from CSV</a>
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary">
@@ -236,9 +236,9 @@
                                     id="sendDropdown">
                                     <i class="icon-envelope pr-2"></i>Send</button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Invitations</a>
-                                    <a class="dropdown-item" href="#">Event Reminders</a>
-                                    <a class="dropdown-item" href="#">Event Cancellation Email</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendInvites">Invitations</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendEventReminders">Event Reminders</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendEventCancellationEmail">Event Cancellation Email</a>
                                 </div>
                             </div>
                         </div>
@@ -4068,25 +4068,303 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+
+<!-- import Modal macro file -->
+
+
+<!-- Add Invitee modal -->
+
+<div class="modal fade" id="addInvitee" tabindex="-1" role="dialog" aria-labelledby="#addInviteeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-default" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="#addInviteeLabel">Add Invitee</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                <!-- Add invitee modal -->
+                
+                <div class="row mb-2">
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" aria-describedby="firstNameHelp" placeholder="Please enter your first name">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label for="middleName">Middle Name</label>
+                            <input type="text" class="form-control" id="middleName" aria-describedby="middleNameHelp" placeholder="Please enter your middle name">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp" placeholder="Please enter your last name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="firstName">Email</label>
+                            <input type="email" class="form-control" id="firstName" aria-describedby="firstNameHelp" placeholder="Please enter your email">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" class="form-control phone" id="phoneNumber" aria-describedby="phoneNumberHelp">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea name="" id="address" rows="5" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select name="" id="country" class="form-control">
+                                <option value="Sri Lanka">Sri Lanka</option>
+                                <option value="United States of America">United States of America</option>
+                                <option value="Belgium">Belgium</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <h6>Meal Plan</h6>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="chicken" class="custom-control-input">
+                                <label class="custom-control-label" for="chicken">Chicken</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="beef" class="custom-control-input">
+                                <label class="custom-control-label" for="beef">Beef</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="pork" class="custom-control-input">
+                                <label class="custom-control-label" for="pork">Pork</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="vegi" class="custom-control-input">
+                                <label class="custom-control-label" for="vegi">Vegetarian</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4"> 
+                        <div class="form-group">
+                            <h6>Drink Preference</h6>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="beer" class="custom-control-input">
+                                <label class="custom-control-label" for="beer">Beer</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="wine" class="custom-control-input">
+                                <label class="custom-control-label" for="wine">Wine</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="coffee" class="custom-control-input">
+                                <label class="custom-control-label" for="coffee">Coffee</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="form-group">
+                            <h6>Music Preference</h6>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="classic" class="custom-control-input">
+                                <label class="custom-control-label" for="classic">Classic</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="jazz" class="custom-control-input">
+                                <label class="custom-control-label" for="jazz">Jazz</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add Invitee</button>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Add walk-in invitee modal -->
+
+<div class="modal fade" id="addWalkInInvitee" tabindex="-1" role="dialog" aria-labelledby="#addWalkInInviteeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-default" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="#addWalkInInviteeLabel">Add Walik-In Invitee</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add invitee modal -->
+                
+                Add Walk-in Invitee form
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add Walk-in Invitee</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add invitee from event modal -->
+
+<div class="modal fade" id="addEventInvitee" tabindex="-1" role="dialog" aria-labelledby="#addEventInviteeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-default" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="#addEventInviteeLabel">Add Invitee from Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add invitee modal -->
+                
+                Add invitee from event
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add Invitee from Event</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add invitee from CSV modal -->
+
+<div class="modal fade" id="addCsvInvitee" tabindex="-1" role="dialog" aria-labelledby="#addCsvInviteeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-default" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="#addCsvInviteeLabel">Add Invitee from CSV</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add invitee modal -->
+                
+                Add invitee from CSV
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add Invitee from CSV</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Send invites modal -->
+
+<div class="modal fade" id="sendInvites" tabindex="-1" role="dialog" aria-labelledby="#sendInvitesLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-default" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="#sendInvitesLabel">Send Invites</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add invitee modal -->
+                
+                Send Invitation
+  
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send Invites</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Send event reminders -->
+
+<div class="modal fade" id="sendEventReminders" tabindex="-1" role="dialog" aria-labelledby="#sendEventRemindersLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-default" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="#sendEventRemindersLabel">Send Event Reminders</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add invitee modal -->
+                
+                Event Reminders
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send Event Reminders</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Send event cancellation email -->
+
+<div class="modal fade" id="sendEventCancellationEmail" tabindex="-1" role="dialog" aria-labelledby="#sendEventCancellationEmailLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-default" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="#sendEventCancellationEmailLabel">Send Event Cancellation Email</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add invitee modal -->
+                
+                Event Cancellation Email
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send Event Cancellation Email</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -4110,6 +4388,7 @@
     <script src="js/coreui.min.js"></script>
     <script src="js/jquery.easypiechart.js"></script>
     <script src="js/charts.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <!-- endbuild -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>

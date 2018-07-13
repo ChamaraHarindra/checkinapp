@@ -474,3 +474,15 @@ h2 {
     color: $red-color;
   }
 }
+
+
+.modal-default .modal-header {
+  background: #2b71ef;
+  color: white;
+  padding: 15px 15px;
+  text-transform:  uppercase;
+}
+
+.modal-default  button.close {
+  color: white;
+}
