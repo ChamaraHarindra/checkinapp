@@ -1,0 +1,58 @@
+{% set title = 'Extra Credits' %} {% set ExtraCredits = true %}
+<!-- base layout file inheritance -->
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-fluid">
+        <div class="animated fadeIn">
+            <div class="card">
+                <div class="card-body pricing-table">
+                    <div class="row">
+                        <div class="col-12 col-lg-12">
+                            <h2>{{ title }}</h2>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-12 col-lg-2">
+                            <div class="event-desc-box profile-info">
+                                <span class="material-icons">attach_money</span>
+                                <div class="content">
+                                    <strong class="d-block">Remaining Credits:</strong> 48
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                            <div class="event-desc-box profile-info">
+                                <span class="material-icons">check</span>
+                                <div class="content">
+                                    <strong class="d-block">Subscribed Plan:</strong> Free Plan
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                            <div class="event-desc-box profile-info">
+                                <span class="material-icons">event</span>
+                                <div class="content">
+                                    <strong class="d-block">Subscribed Date:</strong>
+                                    2018-07-12 16:25:41
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-2">
+                            <div class="event-desc-box profile-info">
+                                <span class="material-icons">event</span>
+                                <div class="content">
+                                    <strong class="d-block">Valid Until:</strong> 2019-07-12 16:25:41
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>You have not yet subscribed to a Plan. Please subscribe to a plan clicking on this <a href="a-plan-pricing.html">link</a> and activate this feature.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,8 +1,13 @@
 // If you want to override variables do it here
 @import "variables";
 
+
+
 // Import styles
 @import "vendors/coreui/coreui";
 
+// Import styles
+@import "vendors/bootstrap/bootstrap";
+
 // If you want to add something do it here
-@import "custom";  
+@import "custom";

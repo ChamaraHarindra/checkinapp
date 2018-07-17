@@ -1,0 +1,31 @@
+{% set title = 'Event - Create Q and A' %} {% set EventQAndA = true %}
+<!-- base layout file inheritance -->
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="card event-grid__card">
+            <div class="event-background" id="event-background" style="background-image: url(img/events/engagement.jpg)">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/event-page-top-info.html" %}
+            </div>
+            <nav class="sub-nav">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/sub-nav.html" %}
+            </nav>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <h2>Create Q &amp; A</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        content goes here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

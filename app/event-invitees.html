@@ -14,27 +14,25 @@
     <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <!-- build:css css/main.min.css -->
-    <link href="css/vendors/pace-progress/pace.css" rel="stylesheet"> 
-    <link href="css/vendors/bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="css/vendors/awesome-select/awselect.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet"> 
+    <link href="css/vendors/pace-progress/pace.css" rel="stylesheet">
+    <link href="css/vendors/sweetalert2.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- endbuild -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
-
     <!-- Header Include -->
     <header class="app-header navbar">
     <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="./">
-        <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="CoreUI Logo">
-        <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">
+        <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="Check In Logo">
+        <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="Check In Logo">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span>
     </button>
     <ul class="nav navbar-nav d-md-down-none search-bar">
         <li class="nav-item px-3">
@@ -73,27 +71,27 @@
             <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="d-md-down-none">Hello Admin</span>
                 <img class="img-avatar" src="img/avatars/5.jpg" alt="admin-name">
-                <span class="fa fa-angle-down"></span>
+                <span class="icon icon-arrow-down"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-user"></i> My Info
+                <a class="dropdown-item" href="a-profile.html">
+                    <i class="icon icon-user"></i> Profile
                 </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-info"></i> Branding
+                <a class="dropdown-item" href="a-branding.html">
+                    <i class="icon icon-info"></i> Branding
                 </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-users"></i> Team
+                <a class="dropdown-item" href="a-team.html">
+                    <i class="icon icon-people"></i> Team
                 </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-dollar"></i> Billing
+                <a class="dropdown-item" href="a-plan-pricing.html">
+                    <i class="icon icon-diamond"></i> Plan Pricing
                 </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-user"></i> Profile</a>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-wrench"></i> Settings</a>
-                <a class="dropdown-item" href="#">
-                    <i class="fa fa-lock"></i> Logout</a>
+                <a class="dropdown-item" href="a-extra-credits.html">
+                    <i class="icon icon-credit-card"></i> Extra Credits</a>
+                <a class="dropdown-item" href="a-billing.html">
+                    <i class="icon icon-wallet"></i> Billing</a>
+                <a class="dropdown-item" href="login.html">
+                    <i class="icon icon-power"></i> Logout</a>
             </div>
         </li>
     </ul>
@@ -115,12 +113,12 @@
       <li class="nav-title pt-0"></li>
       <li class="nav-title">Menu</li>
       <li class="nav-item">
-        <a class="nav-link active" href="index.html">
+        <a class="nav-link" href="index.html">
           <i class="nav-icon icon-home"></i> Event List
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="add-new-event.html">
           <i class="nav-icon icon-plus"></i> Add New Event</a>
       </li>
       <li class="nav-item">
@@ -144,7 +142,7 @@
   <button class="sidebar-minimizer brand-minimizer" type="button"></button>
 </div>
         <main class="main">
-            
+
             <!-- Breadcrumbs Include -->
             <ol class="breadcrumb">
     <li class="breadcrumb-item">Home</li>
@@ -192,24 +190,24 @@
                 <i class="icon-people pr-2"></i>Invitees</a>
         </li>
         <li>
-            <a href="" >
+            <a href="event-edit.html" >
                 <i class="icon-pencil pr-2"></i>Edit Event</a>
         </li>
         <li>
-            <a href="" >
+            <a href="event-vip-alert.html" >
                 <i class="icon-bell pr-2"></i>Add VIP Alert Receivers</a>
         </li>
         <li>
-            <a href="" >
+            <a href="event-stats.html" >
                 <i class="icon-chart pr-2"></i>Event Stats</a>
         </li>
         <li>
-            <a href="" >
+            <a href="event-create-badge.html" >
                 <i class="icon-badge pr-2"></i>Create Badge</a>
         </li>
         <li>
-            <a href="" >
-                <i class="icon-question pr-2"></i>Create Q & A</a>
+            <a href="event-create-q-a.html" >
+                <i class="icon-question pr-2"></i>Create Q &amp; A</a>
         </li>
     </ul>
             </nav>
@@ -237,7 +235,7 @@
                                     <i class="icon-envelope pr-2"></i>Send</button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendInvites">Invitations</a>
-                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendEventReminders">Event Reminders</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendEventReminders">Event Reminders <span class="badge badge-danger">4 Left</span></a>
                                     <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#sendEventCancellationEmail">Event Cancellation Email</a>
                                 </div>
                             </div>
@@ -4160,7 +4158,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4"> 
+                    <div class="col-12 col-lg-4">
                         <div class="form-group">
                             <h6>Drink Preference</h6>
                             <div class="custom-control custom-radio">
@@ -4190,14 +4188,14 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Add Invitee</button>
+                <button type="button" class="btn btn-primary submit-btn" id="addInvitee">Add Invitee</button>
             </div>
         </div>
     </div>
@@ -4216,15 +4214,12 @@
             </div>
             <div class="modal-body">
                 <!-- Add invitee modal -->
-                
-                Add Walk-in Invitee form
-
-                
+                 Add Walk-in Invitee form 
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Add Walk-in Invitee</button>
+                <button type="button" class="btn btn-primary submit-btn" id="addWalkInInvitee">Add Walk-in Invitee</button>
             </div>
         </div>
     </div>
@@ -4243,15 +4238,12 @@
             </div>
             <div class="modal-body">
                 <!-- Add invitee modal -->
-                
-                Add invitee from event
-
-                
+                 Add invitee from event 
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Add Invitee from Event</button>
+                <button type="button" class="btn btn-primary submit-btn" id="addEventInvitee">Add Invitee from Event</button>
             </div>
         </div>
     </div>
@@ -4270,15 +4262,13 @@
             </div>
             <div class="modal-body">
                 <!-- Add invitee modal -->
-                
-                Add invitee from CSV
-
-                
+                 Add invitee from
+                CSV 
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Add Invitee from CSV</button>
+                <button type="button" class="btn btn-primary submit-btn" id="addCsvInvitee">Add Invitee from CSV</button>
             </div>
         </div>
     </div>
@@ -4297,15 +4287,12 @@
             </div>
             <div class="modal-body">
                 <!-- Add invitee modal -->
-                
-                Send Invitation
-  
-                
+                 Send Invitation 
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send Invites</button>
+                <button type="button" class="btn btn-primary submit-btn" id="sendInvites">Send Invites</button>
             </div>
         </div>
     </div>
@@ -4324,15 +4311,12 @@
             </div>
             <div class="modal-body">
                 <!-- Add invitee modal -->
-                
-                Event Reminders
-
-                
+                 Event Reminders 
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send Event Reminders</button>
+                <button type="button" class="btn btn-primary submit-btn" id="sendEventReminders">Send Event Reminders</button>
             </div>
         </div>
     </div>
@@ -4351,15 +4335,13 @@
             </div>
             <div class="modal-body">
                 <!-- Add invitee modal -->
-                
-                Event Cancellation Email
-
-                
+                 Event Cancellation
+                Email 
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send Event Cancellation Email</button>
+                <button type="button" class="btn btn-primary submit-btn" id="sendEventCancellationEmail">Send Event Cancellation Email</button>
             </div>
         </div>
     </div>
@@ -4381,18 +4363,17 @@
 
 
     <!-- build:js js/scripts.min.js -->
-    <script src="js/awselect.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/perfect-scrollbar.min.js"></script>
     <script src="js/coreui.min.js"></script>
     <script src="js/jquery.easypiechart.js"></script>
-    <script src="js/charts.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
     <!-- endbuild -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    
+
     <script src="js/main.js"></script>
 
 </body>

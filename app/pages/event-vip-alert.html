@@ -1,0 +1,65 @@
+{% set title = 'Add VIP Alert Receivers' %} {% set EventVip = true %}
+<!-- base layout file inheritance -->
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="card event-grid__card">
+            <div class="event-background" id="event-background" style="background-image: url(img/events/engagement.jpg)">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/event-page-top-info.html" %}
+            </div>
+            <nav class="sub-nav">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/sub-nav.html" %}
+            </nav>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <h2>Add VIP Alert Receivers</h2>
+                        <p>Here, you can add 5 mobile numbers and 5 email addresses of people who would receive alert notifications
+                            when the VIP presence is on the event. </p>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-12 col-lg-5 col-md-5">
+                        <div class="d-flex mb-4 align-items-center justify-content-between">
+                            <h5>Recipient Phone Numbers</h5>
+                            <button class="add-field btn btn-link phoneAdd">
+                                <i class="icon icon-plus mr-2"></i>Add New</button>
+                        </div>
+                        <div id="addPhone">
+                            <div class="form-group">
+                                <label for="phone">Phone Number 1</label>
+                                <input type="text" class="form-control phone" id="phone">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-lg-5 col-md-5">
+                        <div class="d-flex mb-4 align-items-center justify-content-between">
+                            <h5>Recipient Email Address</h5>
+                            <button class="add-field btn btn-link emailAdd">
+                                <i class="icon icon-plus mr-2"></i>Add New</button>
+                        </div>
+                        <div id="addEmail">
+                            <div class="form-group">
+                                <label for="email">Recipient Email Address 1</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <hr> </div>
+                </div>
+                <div class="col-12">
+                    <input type="submit" value="Save Contacts" class="btn btn-primary btn-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

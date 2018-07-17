@@ -1,0 +1,73 @@
+{% set title = 'Event Stats' %} {% set EventStats = true %}
+<!-- base layout file inheritance -->
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="card event-grid__card">
+            <div class="event-background" id="event-background" style="background-image: url(img/events/engagement.jpg)">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/event-page-top-info.html" %}
+            </div>
+            <nav class="sub-nav">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/sub-nav.html" %}
+            </nav>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <h2>Event Stats</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <canvas id="pie-chart" width="800" height="450"></canvas>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <canvas id="bar-chart" width="800" height="450"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/charts.js"></script>
+<script>
+    // Pie Chart for stats
+    new Chart(document.getElementById("pie-chart"), {
+        type: 'pie',
+        data: {
+            labels: ["Checked In", "Cancelled", "Not Checked In"],
+            datasets: [{
+                label: "Attendees List",
+                backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f"],
+                data: [2478, 50, 734]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Attendee List of the Event'
+            }
+        }
+    });
+
+    // bar Chart for stats
+    new Chart(document.getElementById("bar-chart"), {
+        type: 'bar',
+        data: {
+            labels: ["Checked In", "Cancelled", "Not Checked In"],
+            datasets: [{
+                label: "Attendees List",
+                backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f"],
+                data: [2478, 50, 734]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Attendee List of the Event'
+            }
+        }
+    });
+</script> {% endblock %}

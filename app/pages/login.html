@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v2.0.0-rc.1
-* @link https://coreui.io
-* Copyright (c) 2018 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://coreui.io/license)
--->
 
 <html lang="en">
 
@@ -17,13 +10,13 @@
   <meta name="author" content="Łukasz Holeczek">
   <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
   <title>E-CHECK IN - Login Page</title>
-  <!-- Icons-->
-  <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
-  <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-  <!-- Main styles for this application-->
+  <script src="js/pace.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+  <!-- build:css css/main.min.css -->
+  <link href="css/vendors/pace-progress/pace.css" rel="stylesheet">
+  <link href="css/vendors/bootstrap/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+  <!-- endbuild -->
 </head>
 
 <body class="app flex-row">
@@ -49,7 +42,9 @@
           </div>
           <div class="button-group col-12">
             <input type="submit" value="Login" class="btn btn-primary submit">
-            <a href="signup.html" class="btn btn-outline-primary link"><span>Sign up</span></a>
+            <a href="signup.html" class="btn btn-outline-primary link">
+              <span>Sign up</span>
+            </a>
           </div>
         </form>
       </div>
@@ -61,13 +56,10 @@
   </div>
 
 
-  <!-- Bootstrap and necessary plugins-->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="node_modules/pace-progress/pace.min.js"></script>
-  <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-  <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+  <!-- build:js js/scripts.min.js -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- endbuild -->
 </body>
 
 </html>

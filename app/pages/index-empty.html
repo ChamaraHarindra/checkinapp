@@ -1,0 +1,19 @@
+{% set title = 'All Events' %} {% set Events = true %}
+<!-- base layout file inheritance -->
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="d-flex align-items-center justify-content-center h-100">
+            <div class="empty-event">
+                <img src="img/empty.png" alt="No Events">
+                <h1>No Events</h1>
+                <h2>It seems you have no events.<br/>
+                    Let’s change that by adding an event.</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

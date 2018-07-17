@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="E-CHECK IN - Check in made easy through web">
+    <meta name="keyword" content="Check in, event organizing, event planning">
+    <title>Add New Event</title>
+    <script src="js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <!-- build:css css/main.min.css -->
+    <link href="css/vendors/pace-progress/pace.css" rel="stylesheet">
+    <link href="css/vendors/sweetalert2.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- endbuild -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <!-- Header Include -->
+    <header class="app-header navbar">
+    <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="./">
+        <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="Check In Logo">
+        <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="Check In Logo">
+    </a>
+    <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span>
+    </button>
+    <ul class="nav navbar-nav d-md-down-none search-bar">
+        <li class="nav-item px-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="icon-magnifier"></i>
+                    </button>
+                </div>
+                <input type="text" class="form-control searchbox" placeholder="Search your events" aria-label="" aria-describedby="basic-addon1">
+            </div>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto pr-2">
+        <li class="nav-item dropdown d-md-down-none">
+            <a class="nav-link" href="#" title="Support">
+                <i class="icon-support"></i>
+            </a>
+        </li>
+        <li class="nav-item dropdown d-md-down-none">
+            <a class="nav-link" title="Notifications" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="icon-bell"></i>
+                <span class="badge badge-pill badge-danger">2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-header text-center">
+                    <strong>Notifications</strong>
+                </div>
+                <div class="dropdown-item" href="#">You are running low credits.
+                    <a href="#">Buy Credits now</a>
+                </div>
+                <div class="dropdown-item" href="#">Marty's wedding was expired</div>
+            </div>
+        </li>
+        <li class="nav-item dropdown px-3">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="d-md-down-none">Hello Admin</span>
+                <img class="img-avatar" src="img/avatars/5.jpg" alt="admin-name">
+                <span class="icon icon-arrow-down"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="a-profile.html">
+                    <i class="icon icon-user"></i> Profile
+                </a>
+                <a class="dropdown-item" href="a-branding.html">
+                    <i class="icon icon-info"></i> Branding
+                </a>
+                <a class="dropdown-item" href="a-team.html">
+                    <i class="icon icon-people"></i> Team
+                </a>
+                <a class="dropdown-item" href="a-plan-pricing.html">
+                    <i class="icon icon-diamond"></i> Plan Pricing
+                </a>
+                <a class="dropdown-item" href="a-extra-credits.html">
+                    <i class="icon icon-credit-card"></i> Extra Credits</a>
+                <a class="dropdown-item" href="a-billing.html">
+                    <i class="icon icon-wallet"></i> Billing</a>
+                <a class="dropdown-item" href="login.html">
+                    <i class="icon icon-power"></i> Logout</a>
+            </div>
+        </li>
+    </ul>
+</header>
+    <div class="app-body">
+        <!-- SIdebar Include -->
+        <div class="sidebar">
+  <nav class="sidebar-nav">
+    <ul class="nav">
+      <li class="nav-title">Your Company</li>
+      <li class="nav-title pt-0">
+        <select class="form-control">
+          <option value="Company 01" selected>Company 01</option>
+          <option value="Company 01">Company 02</option>
+          <option value="Company 03">Company 03</option>
+          <option value="Company 04">Company 04</option>
+        </select>
+      </li>
+      <li class="nav-title pt-0"></li>
+      <li class="nav-title">Menu</li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="nav-icon icon-home"></i> Event List
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="add-new-event.html">
+          <i class="nav-icon icon-plus"></i> Add New Event</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-calculator"></i> Billing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-calendar"></i> Calendar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-support"></i> Help Center</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-settings"></i> Settings</a>
+      </li>
+    </ul>
+  </nav>
+  <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+</div>
+        <main class="main">
+
+            <!-- Breadcrumbs Include -->
+            <ol class="breadcrumb">
+    <li class="breadcrumb-item">Home</li>
+    <li class="breadcrumb-item">
+      <a href="#">Add New Event</a> 
+    </li>  
+  </ol> 
+
+            <!-- Body Content -->
+            
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="card">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <h2>Add New Event</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <form class="w-100">
+                            <div class="row">
+                                <div class="col-12 col-lg-8">
+                                    <div class="row my-3">
+                                        <div class="col-auto">
+                                            <strong>EVENT INFO</strong>
+                                        </div>
+                                        <div class="col">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-12">
+                                            <div class="form-group">
+                                                <label for="eventName">Event Name</label>
+                                                <input type="text" class="form-control" id="eventName" aria-describedby="eventNameHelp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="eventType">Event Type</label>
+                                                <select name="" class="form-control" id="eventType" aria-describedby="eventTypeHelp">
+                                                    <option value="">Option 01</option>
+                                                    <option value="">Option 02</option>
+                                                    <option value="">Option 03</option>
+                                                    <option value="">Option 04</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="accessCode">Access Code</label>
+                                                <input type="text" class="form-control" id="accessCode" aria-describedby="accessCodeHelp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="text" class="form-control" id="email" aria-describedby="emailHelp">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="phone">Phone Number</label>
+                                                <input type="text" class="form-control phone" id="phone" aria-describedby="phoneHelp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="from">From</label>
+                                                <input type="text" class="form-control datetimepicker date_time" id="from" aria-describedby="fromHelp">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="to">To</label>
+                                                <input type="text" class="form-control datetimepicker date_time" id="to" aria-describedby="toHelp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="d-flex align-items-center file-preview">
+                                                    <img src="img/dummy-image.jpg" class="mx-auto d-block img-fluid" />
+                                                </div>
+                                                <label class="text-center d-block">Profile Image</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="profileImage" aria-describedby="profileImage" multiple accept="image/*">
+                                                    <label class="custom-file-label" for="profileImage">Choose Image</label>
+                                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                                        Image should not be more than 5MB
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <div class="d-flex align-items-center file-preview">
+                                                    <img src="img/dummy-image.jpg" class="mx-auto d-block img-fluid" />
+                                                </div>
+                                                <label class="text-center d-block">Cover Image</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="CoverImage" aria-describedby="CoverImageHelp" multiple accept="image/*">
+                                                    <label for="CoverImage" class="custom-file-label">Choose Image</label>
+                                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                                        Image should not be more than 5MB
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-12">
+                                            <div class="form-group">
+                                                <label for="description">Description</label>
+                                                <textarea name="" id="description" class="form-control" rows="6"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row my-3">
+                                        <div class="col-auto">
+                                            <strong>REFRESHMENTS PLAN</strong>
+                                        </div>
+                                        <div class="col">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-12">
+                                            <div class="form-group">
+                                                <label for="mealPlan">Meal Plan</label>
+                                                <select name="" id="mealPlan" class="form-control">
+                                                    <option value="Chicken">Chicken</option>
+                                                    <option value="Beef">Beef</option>
+                                                    <option value="Sea Food">Sea Food</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-12">
+                                            <div class="form-group">
+                                                <label for="drinks">Drinks</label>
+                                                <select name="" id="drinks" class="form-control">
+                                                    <option value="Chicken">Coffee</option>
+                                                    <option value="Beef">Beer</option>
+                                                    <option value="Sea Food">Liquor</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-12">
+                                            <div class="form-group">
+                                                <label for="music">Music</label>
+                                                <select name="" id="music" class="form-control">
+                                                    <option value="Chicken">Jazz</option>
+                                                    <option value="Beef">Classic</option>
+                                                    <option value="Sea Food">Western</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-8">
+                                    <div class="row my-3">
+                                        <div class="col-auto">
+                                            <strong>ADDRESS</strong>
+                                        </div>
+                                        <div class="col">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="address">Address</label>
+                                                <input type="text" class="form-control" id="to" aria-describedby="address">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="street">Street</label>
+                                                <input type="text" class="form-control" id="street" aria-describedby="street">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="suite">Suite/FLoor</label>
+                                                <input type="text" class="form-control" id="suite" aria-describedby="suite">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="city">City</label>
+                                                <input type="text" class="form-control" id="city" aria-describedby="suite">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="state">State</label>
+                                                <input type="text" class="form-control" id="state" aria-describedby="suite">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="zip">Zip Code</label>
+                                                <input type="text" class="form-control" id="zip" aria-describedby="suite">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="suite">Country</label>
+                                                <input type="text" class="form-control" id="suite" aria-describedby="suite">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.6399988534463!2d-72.67728268425822!3d41.771418979230724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e65362b84bc26d%3A0xbca26738d41ef677!2sMain+St+and+Dunkin+Donuts+Park!5e0!3m2!1sen!2slk!4v1531509872232"
+                                        frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-12">
+                                    <hr/>
+                                </div>
+                                <div class="col-12">
+                                    <input type="submit" value="Save New Event" class="btn btn-primary btn-lg">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        </main>
+    </div>
+
+    <!-- footer Include -->
+    <footer class="app-footer">
+    <div>
+      <span>&copy; 2018 E-CHECK IN.</span>
+    </div>
+  </footer>
+
+
+    <!-- build:js js/scripts.min.js -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="js/coreui.min.js"></script>
+    <script src="js/jquery.easypiechart.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

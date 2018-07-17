@@ -1,0 +1,241 @@
+{% set title = 'Edit Event' %} {% set EventEdit = true %}
+<!-- base layout file inheritance -->
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="card event-grid__card">
+            <div class="event-background" id="event-background" style="background-image: url(img/events/engagement.jpg)">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/event-page-top-info.html" %}
+            </div>
+            <nav class="sub-nav">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/sub-nav.html" %}
+            </nav>
+            <div class="card-body">
+                <form class="w-100">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Edit Event</h2>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-auto">
+                                    <strong>EVENT INFO</strong>
+                                </div>
+                                <div class="col">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="eventName">Event Name</label>
+                                        <input type="text" class="form-control" id="eventName" aria-describedby="eventNameHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="eventType">Event Type</label>
+                                        <select name="" class="form-control" id="eventType" aria-describedby="eventTypeHelp">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                            <option value="">Option 04</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="accessCode">Access Code</label>
+                                        <input type="text" class="form-control" id="accessCode" aria-describedby="accessCodeHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="text" class="form-control" id="email" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="text" class="form-control phone" id="phone" aria-describedby="phoneHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="from">From</label>
+                                        <input type="text" class="form-control datetimepicker date_time" id="from" aria-describedby="fromHelp">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="to">To</label>
+                                        <input type="text" class="form-control datetimepicker date_time" id="to" aria-describedby="toHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <div class="d-flex align-items-center file-preview">
+                                            <img src="img/dummy-image.jpg" class="mx-auto d-block img-fluid" />
+                                        </div>
+                                        <label class="text-center d-block">Profile Image</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="profileImage" aria-describedby="profileImage" multiple accept="image/*">
+                                            <label class="custom-file-label" for="profileImage">Choose Image</label>
+                                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                                Image should not be more than 5MB
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <div class="d-flex align-items-center file-preview">
+                                            <img src="img/dummy-image.jpg" class="mx-auto d-block img-fluid" />
+                                        </div>
+                                        <label class="text-center d-block">Cover Image</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="CoverImage" aria-describedby="CoverImageHelp" multiple accept="image/*">
+                                            <label for="CoverImage" class="custom-file-label">Choose Image</label>
+                                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                                Image should not be more than 5MB
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-12">
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea name="" id="description" class="form-control" rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-auto">
+                                    <strong>REFRESHMENTS PLAN</strong>
+                                </div>
+                                <div class="col">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-12">
+                                    <div class="form-group">
+                                        <label for="mealPlan">Meal Plan</label>
+                                        <select name="" id="mealPlan" class="form-control">
+                                            <option value="Chicken">Chicken</option>
+                                            <option value="Beef">Beef</option>
+                                            <option value="Sea Food">Sea Food</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                    <div class="form-group">
+                                        <label for="drinks">Drinks</label>
+                                        <select name="" id="drinks" class="form-control">
+                                            <option value="Chicken">Coffee</option>
+                                            <option value="Beef">Beer</option>
+                                            <option value="Sea Food">Liquor</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                    <div class="form-group">
+                                        <label for="music">Music</label>
+                                        <select name="" id="music" class="form-control">
+                                            <option value="Chicken">Jazz</option>
+                                            <option value="Beef">Classic</option>
+                                            <option value="Sea Food">Western</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <div class="row my-3">
+                                <div class="col-auto">
+                                    <strong>ADDRESS</strong>
+                                </div>
+                                <div class="col">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <input type="text" class="form-control" id="to" aria-describedby="address">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="street">Street</label>
+                                        <input type="text" class="form-control" id="street" aria-describedby="street">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="suite">Suite/FLoor</label>
+                                        <input type="text" class="form-control" id="suite" aria-describedby="suite">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" id="city" aria-describedby="suite">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <input type="text" class="form-control" id="state" aria-describedby="suite">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="zip">Zip Code</label>
+                                        <input type="text" class="form-control" id="zip" aria-describedby="suite">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="suite">Country</label>
+                                        <input type="text" class="form-control" id="suite" aria-describedby="suite">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.6399988534463!2d-72.67728268425822!3d41.771418979230724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e65362b84bc26d%3A0xbca26738d41ef677!2sMain+St+and+Dunkin+Donuts+Park!5e0!3m2!1sen!2slk!4v1531509872232"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-12">
+                            <hr/>
+                        </div>
+                        <div class="col-12">
+                            <input type="submit" value="Edit Event" class="btn btn-primary btn-lg">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% set title = 'User Profile' %} {% set UserProfile = true %}
+<!-- base layout file inheritance -->
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="card profile__card">
+            <div class="profile__card-inner" id="company-cover-image" style="background-image: url(img/company.jpg)">
+                <!-- Breadcrumbs Include -->
+                {% include "partials/a-profile-cover-image-content.html" %}
+            </div>
+            <div class="card-body">
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-6">
+                        <div class="profile-pic-inner__content--mobile">
+                            <h1 class="mr-4">Teena Garzia</h1>
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#editProfile" class="edit-profile btn btn-outline-primary btn-sm">
+                                <i class="mr-3 icon icon-pencil"></i>Edit Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <h4 class="mb-2">Personal Information</h4>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">phone</span>
+                            <div class="content">
+                                <strong>Phone</strong>: 1234567890
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">cake</span>
+                            <div class="content">
+                                <strong>Birthday</strong>: 2018-06-15
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">email</span>
+                            <div class="content">
+                                <strong>Email</strong>:
+                                <a href="mailto:jashashika@gmail.com">jashashika@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">flag</span>
+                            <div class="content">
+                                <strong>Country</strong>: Albenia
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4 mb-2">
+                        <h4>Account Information</h4>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                            <div class="event-desc-box profile-info">
+                                <span class="material-icons">location_city</span>
+                                <div class="content">
+                                    <strong>Organization</strong>: Association
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">assignment</span>
+                            <div class="content">
+                                <strong>Registered on</strong>: 2018-07-12 16:25:41
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">people</span>
+                            <div class="content">
+                                <strong>Expected Invitees</strong>: &lt; 100
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">local_bar</span>
+                            <div class="content">
+                                <strong>Expected Events</strong>: 10 - 100
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- import Modal macro file -->
+    {% import "macros/modal.html" as macroModals %}
+
+    <!-- Add Invitee modal -->
+    {{ macroModals.modalPop( 'editProfile', '#editProfileLabel', 'Edit Profile', 'modal-lg', modal=8, 'Edit Profile' ) }}
+{% endblock %}

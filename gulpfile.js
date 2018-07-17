@@ -102,9 +102,9 @@ gulp.task('images', function() {
 
 
 // Copying fonts 
-gulp.task('fonts', function() {
-    return gulp.src('./app/fonts/**/*')
-        .pipe(gulp.dest('./dist/fonts'))
+gulp.task('js', function() {
+    return gulp.src(['./app/js/main.js','./app/js/charts.js'])
+        .pipe(gulp.dest('./dist/js'))
 })
 
 // Cleaning 
@@ -129,8 +129,7 @@ gulp.task('default', function(callback) {
 
 gulp.task('build', function(callback) {
     runSequence(
-        'clean:dist',
-        'sass', ['useref', 'images', 'fonts'],
+        'clean:dist', ['useref', 'images', 'js'],
         callback
     )
 })

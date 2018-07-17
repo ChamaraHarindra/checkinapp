@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4"> 
+                    <div class="col-12 col-lg-4">
                         <div class="form-group">
                             <h6>Drink Preference</h6>
                             <div class="custom-control custom-radio">
@@ -115,32 +115,167 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
-                {% elif modal==2 %}
-                Add Walk-in Invitee form
-
-                {% elif modal==3 %}
-                Add invitee from event
-
-                {% elif modal==4 %}
-                Add invitee from CSV
-
-                {% elif modal==5 %}
-                Send Invitation
-  
-                {% elif modal==6 %}
-                Event Reminders
-
-                {% elif modal==7 %}
-                Event Cancellation Email
-
+                {% elif modal==2 %} Add Walk-in Invitee form {% elif modal==3 %} Add invitee from event {% elif modal==4 %} Add invitee from
+                CSV {% elif modal==5 %} Send Invitation {% elif modal==6 %} Event Reminders {% elif modal==7 %} Event Cancellation
+                Email {% elif modal==8 %}
+                <form class="w-100">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row my-3">
+                                <div class="col-auto">
+                                    <strong>PERSONAL INFO</strong>
+                                </div>
+                                <div class="col">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" aria-describedby="firstName">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="middleName">Middle Name</label>
+                                        <input type="text" class="form-control" id="middleName" aria-describedby="middleName">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" aria-describedby="lastName">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="text" class="form-control phone" id="phone" aria-describedby="phone">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" aria-describedby="email">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="birthday">Birthday</label>
+                                        <input type="text" class="form-control date" id="birthday" aria-describedby="birthday">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="country">Country</label>
+                                        <select name="" class="form-control" id="country" aria-describedby="country">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                            <option value="">Option 04</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <div class="d-flex align-items-center file-preview">
+                                            <img src="img/dummy-image.jpg" class="mx-auto d-block img-fluid" />
+                                        </div>
+                                        <label class="text-center d-block">Profile Image</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="profileImage" aria-describedby="profileImage" multiple accept="image/*">
+                                            <label class="custom-file-label" for="profileImage">Choose Image</label>
+                                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                                Image should not be more than 5MB
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <div class="d-flex align-items-center file-preview">
+                                            <img src="img/dummy-image.jpg" class="mx-auto d-block img-fluid" />
+                                        </div>
+                                        <label class="text-center d-block">Cover Image</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="CoverImage" aria-describedby="CoverImageHelp" multiple accept="image/*">
+                                            <label for="CoverImage" class="custom-file-label">Choose Image</label>
+                                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                                Image should not be more than 5MB
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-auto">
+                                    <strong>ORGANIZATION INFO</strong>
+                                </div>
+                                <div class="col">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="registeredOn">Registered On</label>
+                                        <input type="text" class="form-control date_time" id="registeredOn" aria-describedby="fromHelp">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="expectedInvitees">Expected Invitees</label>
+                                        <select name="" class="form-control" id="expectedInvitees" aria-describedby="expectedInvitees">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                            <option value="">Option 04</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label for="NoOfEventsPerYear">Expected No of Events Per Year</label>
+                                        <select name="" class="form-control" id="NoOfEventsPerYear" aria-describedby="NoOfEventsPerYear">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                            <option value="">Option 04</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group">
+                                        <label for="organizationType">Organization Type</label>
+                                        <select name="" class="form-control" id="organizationType" aria-describedby="organizationType">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                            <option value="">Option 04</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 {% endif %}
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">{{ btnText }}</button>
+                <button type="button" class="btn btn-primary submit-btn" id="{{ id }}">{{ btnText }}</button>
             </div>
         </div>
     </div>

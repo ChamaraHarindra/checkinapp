@@ -1,0 +1,144 @@
+{% set title = 'Plan Pricing' %} {% set PlanPricing = true %}
+<!-- base layout file inheritance -->
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="card">
+            <div class="card-body pricing-table">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <h2>{{ title }}</h2>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-12 col-lg-2">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">attach_money</span>
+                            <div class="content">
+                                <strong class="d-block">Remaining Credits:</strong> 48
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">check</span>
+                            <div class="content">
+                                <strong class="d-block">Subscribed Plan:</strong> Free Plan
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">event</span>
+                            <div class="content">
+                                <strong class="d-block">Subscribed Date:</strong>
+                                2018-07-12 16:25:41
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <div class="event-desc-box profile-info">
+                            <span class="material-icons">event</span>
+                            <div class="content">
+                                <strong class="d-block">Valid Until:</strong> 2019-07-12 16:25:41
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-6 col-lg-3 col-12">
+                        <div class="item inactive">
+                            <div class="heading">
+                                <h3>FREE</h3>
+                            </div>
+                            <p>Free subscription. Limited facilities</p>
+                            <div class="features">
+                                <h4>
+                                    <span class="feature">Guest Credits</span> :
+                                    <span class="value">50</span>
+                                </h4>
+                                <h4>
+                                    <span class="feature">Fee Per Guest</span> :
+                                    <span class="value">$1.00</span>
+                                </h4>
+                            </div>
+                            <div class="price">
+                                <h4>$0</h4>
+                            </div>
+                            <button class="btn btn-block btn-outline-primary" type="submit">BUY NOW</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-12">
+                        <div class="item">
+                            <div class="heading">
+                                <h3>BASIC PLAN</h3>
+                            </div>
+                            <p>Basic subscription. Limited facilities</p>
+                            <div class="features">
+                                <h4>
+                                    <span class="feature">Guest Credits</span> :
+                                    <span class="value">200</span>
+                                </h4>
+                                <h4>
+                                    <span class="feature">Fee Per Guest</span> :
+                                    <span class="value">$0.25</span>
+                                </h4>
+                            </div>
+                            <div class="price">
+                                <h4>$99</h4>
+                            </div>
+                            <button class="btn btn-block btn-outline-primary" type="submit">BUY NOW</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-12">
+                        <div class="item">
+                            <div class="ribbon">Best Value</div>
+                            <div class="heading">
+                                <h3>STANDARD PLAN</h3>
+                            </div>
+                            <p>Standard subscription.</p>
+                            <div class="features">
+                                <h4>
+                                    <span class="feature">Guest Credits</span> :
+                                    <span class="value">1000</span>
+                                </h4>
+                                <h4>
+                                    <span class="feature">Fee Per Guest</span> :
+                                    <span class="value">$0.20</span>
+                                </h4>
+                            </div>
+                            <div class="price">
+                                <h4>$349</h4>
+                            </div>
+                            <button class="btn btn-block btn-primary" type="submit">BUY NOW</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-12">
+                        <div class="item">
+                            <div class="heading">
+                                <h3>PROFESSIONAL PLAN</h3>
+                            </div>
+                            <p>Professional subscription.</p>
+                            <div class="features">
+                                <h4>
+                                    <span class="feature">Guest Credits</span> :
+                                    <span class="value">5000</span>
+                                </h4>
+                                <h4>
+                                    <span class="feature">Fee Per Guest</span> :
+                                    <span class="value">$0.15</span>
+                                </h4>
+                            </div>
+                            <div class="price">
+                                <h4>$999</h4>
+                            </div>
+                            <button class="btn btn-block btn-outline-primary" type="submit">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="E-CHECK IN - Check in made easy through web">
+    <meta name="keyword" content="Check in, event organizing, event planning">
+    <title>Branding</title>
+    <script src="js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <!-- build:css css/main.min.css -->
+    <link href="css/vendors/pace-progress/pace.css" rel="stylesheet">
+    <link href="css/vendors/sweetalert2.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- endbuild -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <!-- Header Include -->
+    <header class="app-header navbar">
+    <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="./">
+        <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="Check In Logo">
+        <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="Check In Logo">
+    </a>
+    <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span>
+    </button>
+    <ul class="nav navbar-nav d-md-down-none search-bar">
+        <li class="nav-item px-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="icon-magnifier"></i>
+                    </button>
+                </div>
+                <input type="text" class="form-control searchbox" placeholder="Search your events" aria-label="" aria-describedby="basic-addon1">
+            </div>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto pr-2">
+        <li class="nav-item dropdown d-md-down-none">
+            <a class="nav-link" href="#" title="Support">
+                <i class="icon-support"></i>
+            </a>
+        </li>
+        <li class="nav-item dropdown d-md-down-none">
+            <a class="nav-link" title="Notifications" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="icon-bell"></i>
+                <span class="badge badge-pill badge-danger">2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-header text-center">
+                    <strong>Notifications</strong>
+                </div>
+                <div class="dropdown-item" href="#">You are running low credits.
+                    <a href="#">Buy Credits now</a>
+                </div>
+                <div class="dropdown-item" href="#">Marty's wedding was expired</div>
+            </div>
+        </li>
+        <li class="nav-item dropdown px-3">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="d-md-down-none">Hello Admin</span>
+                <img class="img-avatar" src="img/avatars/5.jpg" alt="admin-name">
+                <span class="icon icon-arrow-down"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="a-profile.html">
+                    <i class="icon icon-user"></i> Profile
+                </a>
+                <a class="dropdown-item" href="a-branding.html">
+                    <i class="icon icon-info"></i> Branding
+                </a>
+                <a class="dropdown-item" href="a-team.html">
+                    <i class="icon icon-people"></i> Team
+                </a>
+                <a class="dropdown-item" href="a-plan-pricing.html">
+                    <i class="icon icon-diamond"></i> Plan Pricing
+                </a>
+                <a class="dropdown-item" href="a-extra-credits.html">
+                    <i class="icon icon-credit-card"></i> Extra Credits</a>
+                <a class="dropdown-item" href="a-billing.html">
+                    <i class="icon icon-wallet"></i> Billing</a>
+                <a class="dropdown-item" href="login.html">
+                    <i class="icon icon-power"></i> Logout</a>
+            </div>
+        </li>
+    </ul>
+</header>
+    <div class="app-body">
+        <!-- SIdebar Include -->
+        <div class="sidebar">
+  <nav class="sidebar-nav">
+    <ul class="nav">
+      <li class="nav-title">Your Company</li>
+      <li class="nav-title pt-0">
+        <select class="form-control">
+          <option value="Company 01" selected>Company 01</option>
+          <option value="Company 01">Company 02</option>
+          <option value="Company 03">Company 03</option>
+          <option value="Company 04">Company 04</option>
+        </select>
+      </li>
+      <li class="nav-title pt-0"></li>
+      <li class="nav-title">Menu</li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="nav-icon icon-home"></i> Event List
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="add-new-event.html">
+          <i class="nav-icon icon-plus"></i> Add New Event</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-calculator"></i> Billing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-calendar"></i> Calendar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-support"></i> Help Center</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="nav-icon icon-settings"></i> Settings</a>
+      </li>
+    </ul>
+  </nav>
+  <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+</div>
+        <main class="main">
+
+            <!-- Breadcrumbs Include -->
+            <ol class="breadcrumb">
+    <li class="breadcrumb-item">Home</li>
+    <li class="breadcrumb-item">
+      <a href="#">Branding</a> 
+    </li>  
+  </ol> 
+
+            <!-- Body Content -->
+            
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <h1>Branding</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        </main>
+    </div>
+
+    <!-- footer Include -->
+    <footer class="app-footer">
+    <div>
+      <span>&copy; 2018 E-CHECK IN.</span>
+    </div>
+  </footer>
+
+
+    <!-- build:js js/scripts.min.js -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="js/coreui.min.js"></script>
+    <script src="js/jquery.easypiechart.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
