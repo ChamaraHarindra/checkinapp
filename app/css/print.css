@@ -1,0 +1,24 @@
+.card {
+  border: none;
+  border-radius: 0; }
+
+.invoice-header {
+  border-bottom: 1px solid #d6d6d6;
+  padding: 15px 0;
+  background: #f2f2f2;
+  position: relative;
+  margin: -1.25rem -webkit-calc(-1.25rem + -15px) 0;
+  margin: -1.25rem calc(-1.25rem + -15px) 0; }
+  .invoice-header img {
+    margin: auto;
+    display: block; }
+
+.total-table {
+  float: right;
+  width: 100%; }
+  .total-table td, .total-table tr {
+    border: none; }
+  .total-table .total-row td {
+    background: #f2f2f2 !important; }
+
+/*# sourceMappingURL=print.css.map */

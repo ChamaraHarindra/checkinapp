@@ -469,7 +469,8 @@ h2 {
         transition: all ease-in .2s;
         border: 1px solid #dedede;
     }
-    .icon-eye {
+    .icon-eye,
+    .icon-cloud-download {
         color: $green-color;
     }
     .icon-pencil {
@@ -711,7 +712,7 @@ h2 {
 		font-weight: 600;
 		padding: 9px 0;
     }
-    
+
     .inactive,
     .inactive h4 {
         color: #a1a1a1 !important;

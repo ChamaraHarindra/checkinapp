@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="E-CHECK IN - Check in made easy through web">
     <meta name="keyword" content="Check in, event organizing, event planning">
-    <title>Team</title>
+    <title>Team Members</title>
     <script src="js/pace.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,8 +28,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="./">
-        <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="Check In Logo">
-        <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="Check In Logo">
+        <img class="navbar-brand-full" src="img/brand/logo-white.svg" height="30" alt="Check In Logo">
+        <img class="navbar-brand-minimized" src="img/brand/icon-white.svg" height="30" alt="Check In Logo">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span>
@@ -147,7 +147,7 @@
             <ol class="breadcrumb">
     <li class="breadcrumb-item">Home</li>
     <li class="breadcrumb-item">
-      <a href="#">Team</a> 
+      <a href="#">Team Members</a> 
     </li>  
   </ol> 
 
@@ -160,14 +160,178 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12 col-lg-12">
-                        <h1>Team</h1>
+                        <h2>Team Members</h2>
+                        <div class="event-btn mb-4" role="group">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTeamMember">
+                                <i class="icon-plus pr-2"></i>Add Team Member
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-striped table-bordered data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>1</td>
+                                    <td>Roland Fonseka</td>
+                                    <td>Company Admin</td>
+                                    <td>
+                                        <a href="mailto:wballister0@alexa.com">wballister0@alexa.com</a>
+                                    </td>
+                                    <td>746-726-8028</td>
+                                    <td>
+                                        <div class="button-group text-center">
+                                            <button class="btn btn-danger action-btn delete" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <i class="icon-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2</td>
+                                    <td>Shashika Pradeep</td>
+                                    <td>Team Member</td>
+                                    <td>
+                                        <a href="mailto:wballister0@alexa.com">wballister0@alexa.com</a>
+                                    </td>
+                                    <td>746-726-8028</td>
+                                    <td>
+                                        <div class="button-group text-center">
+                                            <button class="btn btn-danger action-btn delete" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <i class="icon-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>3</td>
+                                    <td>Chamara Haindra</td>
+                                    <td>Team Member</td>
+                                    <td>
+                                        <a href="mailto:wballister0@alexa.com">wballister0@alexa.com</a>
+                                    </td>
+                                    <td>746-726-8028</td>
+                                    <td>
+                                        <div class="button-group text-center">
+                                            <button class="btn btn-danger action-btn delete" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <i class="icon-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- Modal -->
 
+<!-- import Modal macro file -->
+
+
+<!-- Add Invitee modal -->
+
+<div class="modal fade" id="addTeamMember" tabindex="-1" role="dialog" aria-labelledby="#addTeamMemberLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-default" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="#addTeamMemberLabel">Add Team Member</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add invitee modal -->
+                
+                <form class="w-100">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" aria-describedby="firstName">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="middleName">Middle Name</label>
+                                        <input type="text" class="form-control" id="middleName" aria-describedby="middleName">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" aria-describedby="lastName">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="text" class="form-control phone" id="phone" aria-describedby="phone">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" aria-describedby="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <textarea name="" id="address" rows="5" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="country">Country</label>
+                                        <select name="" class="form-control" id="country" aria-describedby="country">
+                                            <option value="">Option 01</option>
+                                            <option value="">Option 02</option>
+                                            <option value="">Option 03</option>
+                                            <option value="">Option 04</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary submit-btn" id="addTeamMember">Add Team Member</button>
+            </div>
+        </div>
+    </div>
+</div>
+ 
 
 
         </main>

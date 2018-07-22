@@ -18940,7 +18940,8 @@ h2 {
     -webkit-transition: all ease-in .2s;
     transition: all ease-in .2s;
     border: 1px solid #dedede; }
-  .action-btn .icon-eye {
+  .action-btn .icon-eye,
+  .action-btn .icon-cloud-download {
     color: #2ECC71; }
   .action-btn .icon-pencil {
     color: #292b42; }

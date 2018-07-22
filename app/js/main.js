@@ -171,4 +171,31 @@ $(document).ready(function () {
 });
 
 
+// sweet alert on delete team member
+$('.btn.delete').on('click', () => {
+  swal({
+    title: 'Are you sure?',
+    text: "This record will be deleted permanently",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.value) {
+      swal(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    }
+  })
+});
+
+// Tooltip
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+
 //# sourceMappingURL=main.js.map

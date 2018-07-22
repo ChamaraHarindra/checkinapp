@@ -1100,5 +1100,57 @@
         "date_created": "10/20/2017",
         "time_created": "10/9/2017"
     }
+    ],
+    "team_table" : [
+        {
+            "id": 1,
+            "name": "Roland Fonseka",
+            "role": "Company Admin",
+            "email": "wballister0@alexa.com",
+            "phone": "746-726-8028"
+        },
+        {
+            "id": 2,
+            "name": "Shashika Pradeep",
+            "role": "Team Member",
+            "email": "wballister0@alexa.com",
+            "phone": "746-726-8028"
+        },
+        {
+            "id": 3,
+            "name": "Chamara Haindra",
+            "role": "Team Member",
+            "email": "wballister0@alexa.com",
+            "phone": "746-726-8028"
+        }
+    ],
+    "billing_table" : [
+        {
+            "id": 1,
+            "date_time": "2018-07-20 15:55:42",
+            "amount": "$50",
+            "payment_type": "Visa",
+            "payment_image": "visa",
+            "card_number": "XXXX1111",
+            "status": "Success"
+        },
+        {
+            "id": 2,
+            "date_time": "2018-05-20 08:55:42",
+            "amount": "$80",
+            "payment_type": "Master Card",
+            "payment_image": "mastercard",
+            "card_number": "XXXX2211",
+            "status": "Success"
+        },
+        {
+            "id": 3,
+            "date_time": "2018-07-20 15:55:42",
+            "amount": "$150",
+            "payment_type": "American Express",
+            "payment_image": "american-express",
+            "card_number": "XXXX3698",
+            "status": "Success"
+        }
     ]
 }

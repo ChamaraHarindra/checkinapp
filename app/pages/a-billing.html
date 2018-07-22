@@ -8,11 +8,59 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12 col-lg-12">
-                        <h1>{{ title }}</h1>
+                        <h2>{{ title }}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-striped table-bordered data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Date and Time</th>
+                                    <th>Amount</th>
+                                    <th>Payment Type</th>
+                                    <th>Card Number</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for data in billing_table %}
+                                <tr>
+                                    <td>{{ data.id }}</td>
+                                    <td>{{ data.date_time }}</td>
+                                    <td>{{ data.amount }}</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="mr-2"><img src="img/payments/{{ data.payment_image }}.png" alt="{{ data.payment_type }}"></div>
+                                            <div>{{ data.payment_type }}</div>
+                                        </div>
+                                    </td>
+                                    <td>{{ data.card_number }}</td>
+                                    <td>{{ data.status }}</td>
+                                    <td>
+                                        <div class="button-group text-center">
+                                            <button class="btn btn-primary action-btn" data-toggle="tooltip" data-placement="top" title="Download">
+                                                <i class="icon-cloud-download"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-{% endblock %}
+<!-- Modal -->
+
+<!-- import Modal macro file -->
+{% import "macros/modal.html" as macroModals %}
+
+<!-- Add Invitee modal -->
+{{ macroModals.modalPop( 'addTeamMember', '#addTeamMemberLabel', 'Add Team Member', 'modal-lg', modal=10, 'Add Team Member'
+) }} {% endblock %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/print.css" rel="stylesheet" media="print">
+</head>
+
+<body>
+    <div class="container card">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="card-body">
+                    <div class="invoice-header">
+                        <img src="img/brand/logo.svg" alt="Event Checkin App" height="50">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 py-4">
+                <p>
+                    <strong>Order reference: </strong>43-5664</p>
+                <p>
+                    <strong>Date of order:</strong> 2018-07-20 15:11</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <th>Product Information</th>
+                        <th class="text-right">Total Price</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Basic plan for credits</td>
+                            <td class="text-right">$50</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td style="padding-right: 0;">
+                                <table border="0" class="total-table table">
+                                    <tr>
+                                        <td class="text-right">
+                                            <strong>VAT 21%: </strong>
+                                        </td>
+                                        <td class="text-right">$10</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td class="text-right">
+                                            <strong>Total: </strong>
+                                        </td>
+                                        <td class="text-right total-price">$60</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

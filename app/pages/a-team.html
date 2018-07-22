@@ -1,4 +1,4 @@
-{% set title = 'Team' %} {% set Team = true %}
+{% set title = 'Team Members' %} {% set Team = true %}
 <!-- base layout file inheritance -->
 {% extends "layout.html" %} {% block content %}
 
@@ -8,11 +8,59 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12 col-lg-12">
-                        <h1>{{ title }}</h1>
+                        <h2>{{ title }}</h2>
+                        <div class="event-btn mb-4" role="group">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTeamMember">
+                                <i class="icon-plus pr-2"></i>Add Team Member
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-striped table-bordered data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for data in team_table %}
+                                <tr>
+                                    <td>{{ data.id }}</td>
+                                    <td>{{ data.name }}</td>
+                                    <td>{{ data.role }}</td>
+                                    <td>
+                                        <a href="mailto:{{ data.email }}">{{ data.email }}</a>
+                                    </td>
+                                    <td>{{ data.phone }}</td>
+                                    <td>
+                                        <div class="button-group text-center">
+                                            <button class="btn btn-danger action-btn delete" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <i class="icon-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-{% endblock %}
+<!-- Modal -->
+
+<!-- import Modal macro file -->
+{% import "macros/modal.html" as macroModals %}
+
+<!-- Add Invitee modal -->
+{{ macroModals.modalPop( 'addTeamMember', '#addTeamMemberLabel', 'Add Team Member', 'modal-lg', modal=10, 'Add Team Member'
+) }} {% endblock %}
